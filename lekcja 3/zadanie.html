@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    
+
+       
+
+        <form>
+
+
+            <p id="test1"> Adres: </p>
+            <input type="text" id="adres">
+        <p>.........................</p>
+
+            <legend>Wybierz rozmiar</legend>
+            <input type="radio" value="35cm" name="radio"> 35 cm
+            <input type="radio" value="45cm" name="radio"> 45 cm
+            <input type="radio" value="55cm" name="radio" checked> 55 cm
+       
+        <p>....................</p>
+       
+            <input type="checkbox" value="Na Wynos" name="dostawa"/>Na wynos
+            <input type="checkbox" value="Na Miejscu" name="dostawa"/> Na miejscu
+       
+        <p>............................</p>
+      
+            <select id="Pizza">
+                <option value="margharita">margharita</option>
+                <option value="peperoni">peperoni</option>
+                <option value="hawajska">hawajska</option>
+                <option value="mafia">mafia</option>
+            </select>
+        </form>
+        <button onclick="adres()">Wyślij</button><br>
+
+        <p id="test2"> ... </p>
+        <p id="test3"> ... </p>
+        <p id="test4"> ... </p>
+        <p id="test5"> ... </p>
+
+
+
+
+
+            <script type="text/javascript">
+            function adres(){
+                var napis = document.getElementById("adres").value;
+                document.getElementById("test2").textContent = napis;
+                rozmiar();
+                dostwa();
+                pizza();
+
+            }
+            function rozmiar(){
+                var field = document.getElementsByName('radio');
+                var value1;
+                for(var i = 0; i < field.length; i++){
+                    if(field[i].checked){
+                        value1 = field[i].value;
+                    }
+                }
+                document.getElementById("test3").textContent = value1;
+            }
+            function dostwa() {
+                var field = document.getElementsByName('dostawa');
+                var value1 ='';
+                for(var i = 0; i < field.length; i++){
+                    if(field[i].checked){
+                        value1 = value1+' '+ field[i].value;
+                    }
+                }
+                if (value1=='') value1="Nie dokonałeś żadnego wyboru.";
+            
+                document.getElementById("test4").textContent = value1;
+            }
+            function pizza() {
+                var field = document.getElementById('Pizza');
+            
+                document.getElementById("test5").textContent = field.value;
+                
+            }
+                
+
+            </script>
+    </body>
+</html>
