@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <input type="text" id="teskt">
+        <input type="number" id="razy">
+        <button onclick="ilerazy()">Wyślij</button>
+      
+
+        <script type="text/javascript">
+            function ilerazy() {
+                var ile= document.getElementById("razy").value;
+                
+                var napis = document.getElementById("teskt").value;
+            
+
+                for (var i = 0; i< ile; i++) {
+                    alert(napis);
+                }
+            }          
+            
+        </script>
+    </body>
+</html>
