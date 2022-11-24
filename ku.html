@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <style> td, th { border: 1px solid black; } </style>
+<!-- ustawienie czarnego obramowania tabeli w CSS -->
+
+<table>
+   <thead>
+      <tr>
+         <th>L.P</th> <th>Tytul</th> <th>Sztuki </th> <th>Kup/Sprzedaj </th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>1</td> <td>Buszujacy w zbozu</td> <td> <p id="test1"> 0 </p> <td><button onclick="kup(1)">Kup</button > <button onclick="Sprzedaj(1)">Sprzedaj</button > </td>
+      </tr>
+      <tr>
+         <td>2</td> <td>Berserk</td> <td> <p id="test1"> 0 </p> <td><button onclick="kup(2)">Kup</button > <button onclick="Sprzedaj(2)">Sprzedaj</button > </td>
+      </tr>
+      <tr>
+         <td>3</td> <td>Cyberpunk</td>  <td> <p id="test1"> 0 </p> </td> <td><button onclick="kup(3)">Kup</button > <button onclick="Sprzedaj(3)">Sprzedaj</button > </td>
+      </tr>
+      
+   </tbody>
+</table>
+       
+        <script type="text/javascript">
+           function kup(ilosc) {
+               
+               document.getElementByTag(0).innerHTML = "1"
+
+
+                
+           }
+        </script>
+    </body>
+</html>
